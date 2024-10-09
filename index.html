@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Sign in and Sign up</title>
+    <script src="src/scripts/sweetAlert.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="signin-signup"> 
+            <form action="" class="sign-in-form">
+                <h2 class="title">SIGN IN</h2>
+                <div class="input-field" style="display: none;">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" id="logusername" required>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="logemail" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" id="logpassword" required>
+                    <img src="/src/assets/hide.png"  id="eyeicon">
+                </div>
+                <script>
+                    let eyeicon =document.getElementById("eyeicon");
+                    let logpassword =document.getElementById("logpassword");
+
+                    eyeicon.onclick = function(){
+                        if(logpassword.type == "password") {
+                         logpassword.type = "text";
+                         eyeicon.src = "src/assets/eyeicon.png";
+                        }else{
+                            logpassword.type = "password";
+                            eyeicon.src = "src/assets/hide.png";
+                        }
+                    }
+                     
+                </script>
+    
+                <p class="forgot-password-button" id="forgotpasslabel">Forgot Password?</p>
+                 <button class="" id="send-btn"></button> 
+                 <input type="submit" value="Login" class="btn" id="login"> 
+
+                    <p class="social-text">Or Sign in with social platform</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google" id="googlebtn"></i>
+                        </a>
+                    </div>
+
+
+
+
+
+                <!-- <input type="submit" value="SIGNIN GOOGLE" class="btn" id="googlebtn"> -->
+            </form>
+            
+             <!--FOR SIGN UP-->
+           <form action="" class="sign-up-form">
+                <h2 class="title">SIGN UP</h2>
+
+               <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="subname" placeholder="Firstname" required>
+                </div>
+ 
+                 <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="sublname" placeholder="Lastname" required>
+                </div>
+
+               <!--  <div class="input-field">
+                    <i class="fas fa-phone"></i>
+                    <input type="number" id="contact" placeholder="Contact No" min="0" maxlength="11" required>
+                </div>   -->
+
+                <div class="input-field">
+                    <i class="fas fa-calendar"></i>
+                    <input type="date" id="subdate" placeholder="Birthday">
+                </div>
+               
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="subemail" placeholder="Email">
+                </div>
+
+                <div class="input-field" style="display: none;">
+                    <i class="fas fa-id-badge"></i>
+                    <input type="text" id="subusername" placeholder="Create Username" required>
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="subpassword" placeholder="Password" required>
+                    <img src="src/assets/hide.png"  id="eyeicons" >
+                </div>
+                <script>
+                    let eyeicons =document.getElementById("eyeicons"); 
+                    let subpassword =document.getElementById("subpassword");
+
+                    eyeicons.onclick = function(){
+                        if(subpassword.type == "password") {
+                         subpassword.type = "text";
+                         eyeicons.src = "src/assets/eyeicon.png";
+                        }else{
+                            subpassword.type = "password";
+                            eyeicons.src = "src/assets/hide.png";
+                        }
+                    }
+                     
+                </script>
+                <input type="reset" value="clear" class="btn">
+                <input type="submit" value="Sign up" class="btn" id="submit">
+                
+            </form>
+        </div>
+         <!--FOR SIGN UP-->
+
+        <!--FOR SIGN IN-->
+        <div class="panels-container">
+            
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>QUEZON CITY UNIVERSITY</h3>
+                    <p>LOST AND FOUND SYSTEM</p>
+                    <br>
+                    <button class="btn" id="sign-in-btn"> SIGN IN</button>
+                </div>
+                <img src="src/assets/signups.svg" alt="" class="image">
+            </div>
+
+                <!--FOR SIGNUP-->
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>QUEZON CITY UNIVERSITY</h3>
+                    <p>LOST AND FOUND SYSTEM</p>
+                    <button class="btn" id="sign-up-btn"> SIGN UP</button>
+    
+                </div>
+                    <img src="src/assets/signins.svg" alt="" class="image">
+            </div>
+        </div>
+        <!-- FORGOT PASSWORD! -->
+        <div class="forgot-password-container">
+            <h2 class="fptitle">LET'S FIND YOUR ACCOUNT</h2>
+            <p>	
+                Please enter your email address associated with your account to change your password.</p>
+               
+            <form class="input-elements">
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fpemail" placeholder="Enter Email", required>
+                </div>
+            
+                <div class="button-section">
+                    <input type="submit" value="SUBMIT" id="submitemail" class="fpbtn">
+                </div>
+                <i id="arrowLeft" class="fa fa-arrow-left" aria-hidden="true"></i>
+            </form>
+        </div>
+    </div>
+    <script src="src/scripts/functions.js"></script>
+    <script src="src/scripts/forget.js"></script>
+    <script>
+        let clearSignUpButton = document.querySelector("#sign-up-btn");
+        let clearSignInButton = document.querySelector("#sign-in-btn");
+
+        // CLEAR EMAIL AND PASSWORD INPUT
+        clearSignUpButton.addEventListener('click', ()=> {
+            let logEmailInput = document.querySelector("#logemail"),
+                logPasswordInput = document.querySelector("#logpassword");
+            logEmailInput.value = "";
+            logPasswordInput.value = "";
+        });
+        
+        // CLEAR NAME, EMAIL, PASSWORD INPUT FIELD
+        clearSignInButton.addEventListener('click', ()=> {
+            let subName = document.querySelector("#subname"),
+                subEmail = document.querySelector("#subemail"),
+                subPassword = document.querySelector("#subpassword");
+            subName.value = "";
+            subEmail.value = "";
+            subPassword.value = "";
+        });
+
+    </script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+        import { getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, getRedirectResult, sendPasswordResetEmail} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDGE1ZNkAYEeuPcwwbazeYrNs0RDT8op3c",
+          authDomain: "lostandfoundloginauth.firebaseapp.com",
+          databaseURL: "https://lostandfoundloginauth-default-rtdb.firebaseio.com",
+          projectId: "lostandfoundloginauth",
+          storageBucket: "lostandfoundloginauth.appspot.com",
+          messagingSenderId: "986555819169",
+          appId: "1:986555819169:web:2b0f9eb3b28b4677bd3ce0"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth(app);
+        const provider = new GoogleAuthProvider(app);
+
+        
+            
+    
+
+        submit.addEventListener('click', (e) => {
+
+    
+            
+        var email = document.getElementById('subemail').value;
+        var password = document.getElementById('subpassword').value;
+        var name = document.getElementById('subname').value;
+        var lname = document.getElementById('sublname').value;
+        var date = document.getElementById('subdate').value;
+        
+
+
+
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+
+        set(ref(database, 'user/' + document.getElementById("subusername").value),
+   {
+
+         email: document.getElementById("subemail").value,
+         name: document.getElementById("subname").value,
+         password: document.getElementById("subpassword").value,
+        lastname: document.getElementById('sublname').value,
+        date: document.getElementById('subdate').value,
+    })  
+
+        /*  alert('user created!');  */
+    swal({
+        title: "Successfully!",
+        text: "You are successfully registered!",
+        icon: "success",
+        button: "Ok!",
+    }).then(() => {
+        email: document.getElementById("subemail").value = "";
+        name: document.getElementById("subname").value = "";
+        password: document.getElementById("subpassword").value = "";
+        lastname: document.getElementById("sublname").value = "";
+        date: document.getElementById("subdate").value = "";
+    }); 
+
+
+        // ...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+
+        /* swal({
+      title: "Try Again!",
+       text: "You are not successfully registered!",
+       icon: "error",
+      button: "Ok!",
+        }); */ 
+
+        alert(errorMessage);
+        
+    });
+}); 
+
+
+
+
+
+
+login.addEventListener('click', (e) => {
+
+var password = document.getElementById('logpassword').value;
+var username = document.getElementById('logusername').value;
+var email = document.getElementById('logemail').value;
+
+
+
+signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+
+        const dt = new Date();
+
+        update(ref(database, 'user/' + document.getElementById("logusername").value),
+   {
+       last_login: dt,
+
+    })
+        // ...
+
+    swal({
+        title: "Successfully Login!",
+        text: "Welcome to Lost And Found System",
+        icon: "success",
+        button: "Ok!",
+    }).then(() => {
+        window.location.href = "src/landingPage.html";
+    }); 
+
+
+
+
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+             swal({
+      title: " Please Try Again!",
+       text: "Wrong email/password",
+       icon: "error",
+      button: "Ok!",
+        }).then(() => {
+        email: document.getElementById("logemail").value = "";
+        username: document.getElementById("logusername").value = "";
+        password: document.getElementById("logpassword").value = "";
+    }); 
+
+        
+    });
+
+
+
+});
+
+
+googlebtn.addEventListener('click', (e) => {
+
+    signInWithPopup(auth, provider)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    // The signed-in user info.
+    const user = result.user;
+    /* alert(user.email); */
+
+    swal({
+        title: "Welcome To Lost And Found System",
+        text: (user.email),
+        icon: "success",
+        button: "Ok!",
+    }).then(() => { window.location.href = "src/landingPage.html"; }); 
+
+
+
+    // IdP data available using getAdditionalUserInfo(result)
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+    alert(errorMessage);
+  });
+
+
+  /*   signInWithRedirect(auth, provider);
+
+    getRedirectResult(auth)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access Google APIs.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+
+    // The signed-in user info.
+    const user = result.user;
+    // IdP data available using getAdditionalUserInfo(result)
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  }); */
+
+
+
+
+
+
+
+
+
+
+});
+
+//FOR FORGOT
+
+const reset = document.getElementById("submitemail");
+reset.addEventListener('click', function (event){
+    event.preventDefault()
+
+    const email = document.getElementById("fpemail").value;
+
+    sendPasswordResetEmail(auth, email)
+  .then(() => {
+    // Password reset email sent!
+    // ..
+
+    swal({
+        title: "Email Sent!",
+        text: "Please check your inbox",
+        icon: "success",
+        button: "Ok!",
+    }).then(() => { window.location.href = "index.html"; }); 
+
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+
+    alert(errorMessage)
+  });
+
+});
+
+    
+    
+
+    </script> 
+</body>
+</html>

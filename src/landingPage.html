@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/landing.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
+    <title>Welcome Homie!</title>
+    <script src="scripts/sweetalert2@11.js"></script>
+    <script src="scripts/sweetAlert.js"></script>
+</head>
+<body>
+    
+
+    <div class="sidebar">
+                 
+        <ul>
+            <li> <a href="#"><i class="fas fa-circle"></i></a></li>
+            <li> <a href="#"><i class="fas fa-search"></i></a></li>
+            <li> <a href="#"><i class="fas fa-calculator"></i></a></li>
+            <li> <a href="#"><i class="fas fa-history"></i></a></li>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <li> <a href="#" id="logOutButton"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+        </ul>
+    </div>
+
+    <script>
+        let logOutButton = document.querySelector("#logOutButton");
+        logOutButton.addEventListener('click', () => {
+
+            Swal.fire({
+                title: "Confirmation!",
+                text: "Are you sure do you want to log out?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Log out"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Swal.fire({
+                    //     title: "Deleted!",
+                    //     text: "Your file has been deleted.",
+                    //     icon: "success"
+                    // });
+                    window.location.href = "/index.html";
+                }
+            });
+
+            // swal({
+            //     title: "Confirmation!",
+            //     text: "Are you sure you want to log out?!",
+            //     icon: "warning",
+            //     buttons: true,
+            //     dangerMode: true,
+            // }).then(() => {
+            //     if(willLogOut) {
+            //         swal("Successfully Log out!", "", "success");
+            //         window.location.href = "index.html";
+            //     }else {
+            //         swal("Cancelled Log out!", "", "info");
+            //     }
+            // }); 
+        });
+    </script>
+
+
+</body>
+</html>

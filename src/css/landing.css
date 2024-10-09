@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("/src/assets/Landing.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position:center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background-color: #022f5d;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 100px;
+    color: #efefef;
+    padding-left: 25%;
+    box-sizing: border-box;
+    border-top: rgba(255, 255, 255, .1);
+    font-size: 40px;
+    
+}
+
